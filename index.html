@@ -1,77 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ram Krishan Memorial Sr. Sec. School</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ram Krishan Memorial Sr. Sec. School</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    h1, h2 {
+      color: #800000;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      display: flex;
+      background-color: #800000;
+      color: white;
+      padding: 10px 20px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+
+    .navbar a:hover {
+      background-color: #a83232;
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      min-width: 150px;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Carousel styles */
+    .carousel {
+      position: relative;
+      max-width: 100%;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel img {
+      width: 100%;
+      display: block;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .carousel-buttons button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* FAQ styles */
+    .faq {
+      margin: 20px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .faq h2 {
+      margin-bottom: 10px;
+    }
+
+    .faq-item {
+      margin-bottom: 10px;
+    }
+
+    .faq-item button {
+      width: 100%;
+      background-color: #800000;
+      color: white;
+      border: none;
+      padding: 10px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .faq-item button:hover {
+      background-color: #a83232;
+    }
+
+    .faq-content {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .footer {
+      text-align: center;
+      background-color: #800000;
+      color: white;
+      padding: 10px;
+    }
+  </style>
 </head>
-<body class="font-sans">
-    <!-- Header -->
-    <header class="bg-blue-900 text-white py-4">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="flex items-center">
-                <img src="logo.png" alt="School Logo" class="h-12 w-12 mr-3">
-                <div>
-                    <h1 class="text-2xl font-bold">Ram Krishan Memorial Sr. Sec. School</h1>
-                    <p class="text-sm">Affiliated to Punjab School Education Board, Mohali</p>
-                </div>
-            </div>
-            <div class="text-sm">
-                <p>Phone: 9417551789</p>
-                <p>Email: rkschool.ldh@gmail.com</p>
-            </div>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div>
+      <a href="#">Home</a>
+      <div class="dropdown">
+        <a href="#">Admission</a>
+        <div class="dropdown-content">
+          <a href="#">Online Admission</a>
+          <a href="#">Fee Structure</a>
+          <a href="#">Documents Required</a>
         </div>
-    </header>
+      </div>
+      <a href="#">Academics</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div>
+      <a href="tel:9417551789">Call Us: 9417551789</a>
+      <a href="mailto:rkschool.ldh@gmail.com">Email Us</a>
+    </div>
+  </div>
 
-    <!-- Navigation Bar -->
-    <nav class="bg-blue-700 text-white py-2">
-        <div class="container mx-auto flex justify-around px-4">
-            <a href="#" class="hover:underline">Home</a>
-            <a href="#about" class="hover:underline">About Us</a>
-            <a href="#academics" class="hover:underline">Academics</a>
-            <a href="#student-life" class="hover:underline">Student Life</a>
-            <a href="#gallery" class="hover:underline">Gallery</a>
-            <a href="#faculty" class="hover:underline">Faculty</a>
-            <a href="#contact" class="hover:underline">Contact Us</a>
-        </div>
-    </nav>
+  <!-- Carousel -->
+  <div class="carousel" id="carousel">
+    <img src="https://via.placeholder.com/1200x400?text=Welcome+to+RKM+School" alt="Slide 1">
+    <img src="https://via.placeholder.com/1200x400?text=Quality+Education+for+All" alt="Slide 2" style="display: none;">
+    <img src="https://via.placeholder.com/1200x400?text=Enroll+Today!" alt="Slide 3" style="display: none;">
+    <div class="carousel-buttons">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
 
-    <!-- Slideshow -->
-    <section class="relative">
-        <div class="h-64 bg-cover bg-center" style="background-image: url('banner.jpg');">
-            <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
-                <h2 class="text-white text-3xl font-bold">Welcome to Ram Krishan Memorial Sr. Sec. School</h2>
-            </div>
-        </div>
-    </section>
+  <!-- FAQ Section -->
+  <div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button onclick="toggleFAQ(this)">What is the admission process?</button>
+      <div class="faq-content">
+        <p>The admission process involves filling out the online form, submitting required documents, and completing the entrance test.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button onclick="toggleFAQ(this)">What are the school timings?</button>
+      <div class="faq-content">
+        <p>The school operates from 8:30 AM to 3:00 PM, Monday to Friday.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button onclick="toggleFAQ(this)">What facilities does the school provide?</button>
+      <div class="faq-content">
+        <p>We provide well-equipped labs, a library, sports facilities, and a secure campus.</p>
+      </div>
+    </div>
+  </div>
 
-    <!-- Principal's Message -->
-    <section id="about" class="py-10 bg-gray-100">
-        <div class="container mx-auto px-4 text-center">
-            <h3 class="text-2xl font-bold mb-4">From the Principal's Desk</h3>
-            <p class="text-gray-700">Welcome to our school, where we strive to provide quality education and holistic development for our students...</p>
-        </div>
-    </section>
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 Ram Krishan Memorial Sr. Sec. School. All rights reserved.</p>
+  </div>
 
-    <!-- Upcoming Events -->
-    <section class="py-10">
-        <div class="container mx-auto px-4">
-            <h3 class="text-xl font-bold mb-4">Upcoming Events</h3>
-            <ul class="list-disc list-inside">
-                <li>Annual Sports Day - 15th February 2025</li>
-                <li>Parent-Teacher Meeting - 20th February 2025</li>
-                <li>Science Exhibition - 5th March 2025</li>
-            </ul>
-        </div>
-    </section>
+  <script>
+    // Carousel functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll("#carousel img");
+    const totalSlides = slides.length;
 
-    <!-- Footer -->
-    <footer class="bg-blue-900 text-white py-6">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Ram Krishan Memorial Sr. Sec. School. All rights reserved.</p>
-            <p>Address: Ludhiana, Punjab, India</p>
-        </div>
-    </footer>
+    document.getElementById("next").addEventListener("click", () => {
+      slides[currentSlide].style.display = "none";
+      currentSlide = (currentSlide + 1) % totalSlides;
+      slides[currentSlide].style.display = "block";
+    });
+
+    document.getElementById("prev").addEventListener("click", () => {
+      slides[currentSlide].style.display = "none";
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      slides[currentSlide].style.display = "block";
+    });
+
+    // FAQ functionality
+    function toggleFAQ(button) {
+      const content = button.nextElementSibling;
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
